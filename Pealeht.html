@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="css_kole.css">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
@@ -16,10 +17,10 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-  <h3 class="w3-padding-64 w3-center"><b>Lemmikloomade<br>Veebileht<br><br>Sefiir</b></h3>
+  <h3 class="w3-padding-64 w3-center"><b>Lemmikloomade<br>Veebileht<br><br>Pealeht</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Pealeht</a> 
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Sefiir</a> 
+  <a href="Pealeht.html" onclick="w3_close()" class="w3-bar-item w3-button">Pealeht</a> 
+  <a href="Sefiir.html" onclick="w3_close()" class="w3-bar-item w3-button">Sefiir</a> 
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Sõber1</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Sõber2</a>
 </nav>
@@ -42,15 +43,18 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Photo grid -->
   <div class="w3-row">
     <div class="w3-third">
-      <img src="https://cdn.discordapp.com/attachments/880606039635013683/1041711297571598356/imageedit_7_3717798333.jpg" style="width:100%" onclick="onClick(this)" alt="Sefiir põrandal lebolemas">
+    <a href="Sefiir.html">
+      <img src="https://cdn.discordapp.com/attachments/880606039635013683/1041711297571598356/imageedit_7_3717798333.jpg" style="width:100%" alt="Sefiir põrandal lebolemas">
     </div>
 
     <div class="w3-third">
-      <img src="https://cdn.discordapp.com/attachments/880606039635013683/1041711297827438592/kass_kastis_vert.jpg" style="width:100%" onclick="onClick(this)" alt="Sefiir kassilõksus">
+    <a href="https://en.wikipedia.org/wiki/HTTP_404">
+      <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/boxer-dog-on-ivory-backdrop-danny-beattie-photography.jpg" style="width:100%" alt="Sefiir kassilõksus">
     </div>
     
     <div class="w3-third">
-      <img src="https://cdn.discordapp.com/attachments/880606039635013683/1041711298104279160/kass_arvuti_taga_vert.jpg" style="width:100%" onclick="onClick(this)" alt="Sefiir kassi TV-d vaatamas">
+    <a href="https://en.wikipedia.org/wiki/HTTP_404">
+      <img src="https://thumbs.dreamstime.com/b/portrait-two-dogs-one-cat-piled-up-vertically-portrait-two-dogs-one-cat-piled-up-vertically-isolated-white-212994563.jpg" style="width:100%" alt="Sefiir kassi TV-d vaatamas">
     </div>
   </div>
 
@@ -63,15 +67,6 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
       <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
-  
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
     </div>
   </div>
 
@@ -127,14 +122,6 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
 }
 
 </script>
