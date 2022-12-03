@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>W3.CSS Template</title>
+<title>Pealeht</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -33,29 +33,22 @@
     <div class="w3-third">
     <a href="Sefiir.html">
       <img src="https://cdn.discordapp.com/attachments/880606039635013683/1041711297571598356/imageedit_7_3717798333.jpg" style="width:100%" alt="Sefiir põrandal lebolemas">
+    </a>
     </div>
 
     <div class="w3-third">
     <a href="kanala.html">
       <img src="https://media.discordapp.net/attachments/1042823974503071846/1048249353673912380/20221116_101324_6_4.jpg" style="width:100%" alt="Sefiir kassilõksus">
+    </a>
     </div>
     
     <div class="w3-third">
     <a href="Kitty.html">
       <img src="https://media.discordapp.net/attachments/1043177895318790257/1043188905291301044/Kitty_ules_arkamas.jpg?width=335&height=595" style="width:100%" alt="Kitty üles ärkamas">
+    </a>
     </div>
   </div>
 
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
 
   <footer class="w3-container w3-padding-32 w3-grey">  
     <div class="w3-row-padding">
@@ -77,6 +70,30 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
+</script>
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>Lemmikloomade<br>Veebileht<br><br>Sefiir</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="Pealeht.html" onclick="w3_close()" class="w3-bar-item w3-button" id="PealehtLink">Pealeht</a> 
+  <a href="Sefiir.html" onclick="w3_close()" class="w3-bar-item w3-button" id="SefiirLink">Sefiir</a> 
+  <a href="kanala.html" onclick="w3_close()" class="w3-bar-item w3-button" id="kanalaLink">Kanakari</a>
+  <a href="Kitty.html" onclick="w3_close()" class="w3-bar-item w3-button" id="KittyLink">Kitty</a>
+</nav>
+
+<script>
+function highlightCurrentPage() {
+  var currentPage = document.title;
+  var links = document.querySelectorAll("#mySidebar a");
+  for (var i = 0; i < links.length; i++) {
+    var link = links[i];
+    if (link.innerHTML == currentPage) {
+      link.style.border = "2px solid green";
+    }
+  }
+}
+
+window.addEventListener("load", highlightCurrentPage);
 </script>
 
 
