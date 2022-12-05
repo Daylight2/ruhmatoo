@@ -56,7 +56,7 @@
     <div class="w3-row-padding">
       <div class="w3-third">
         <h3>INFO</h3>
-        <p>Nimi: Sefiir</p>
+        <p>Nimi: Kitty</p>
         <p>Sündinud: 13. märts 2019</p> 
         <p>Vanus: 3 aastane</p> 
         <p>Sugu: isane</p>    
@@ -139,17 +139,8 @@ window.addEventListener("load", highlightCurrentPage);
   <a href="Kitty.html" onclick="w3_close()" class="w3-bar-item w3-button" id="KittyLink">Kitty</a>
 </nav>
 
-<script>
-function highlightCurrentPage() {
-  var currentPage = document.title;
-  var links = document.querySelectorAll("#mySidebar a");
-  for (var i = 0; i < links.length; i++) {
-    var link = links[i];
-    if (link.innerHTML == currentPage) {
-      link.style.border = "2px solid green";
-    }
-  }
-}
+<body onload="javascript:highlightCurrentPage()"></body>
+<script src="skript.js"></script>
 
 window.addEventListener("load", highlightCurrentPage);
 </script>
