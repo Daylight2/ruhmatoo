@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" type="text/css" href="styleSefiir.css">
 </head>
+<body onload="javascript:highlightCurrentPage()">
 
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar"><br>
   <h3 class="w3-padding-64 w3-center"><b>Lemmikloomade<br>Veebileht<br><br>Sefiir</b></h3>
@@ -47,7 +48,7 @@
   <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
+      <img id="img01" class="w3-image" src="https://media.discordapp.net/attachments/1043177895318790257/1043187674158215301/Kitty_aknalaual.jpg?width=335&height=594" alt="Kitty aknalaual">
       <p id="caption"></p>
     </div>
   </div>
@@ -85,65 +86,13 @@
   
 
 </div>
-a
-<script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
 
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
 
-</script>
 
-<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar"><br>
-  <h3 class="w3-padding-64 w3-center"><b>Lemmikloomade<br>Veebileht<br><br>Sefiir</b></h3>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="Pealeht.html" onclick="w3_close()" class="w3-bar-item w3-button" id="PealehtLink">Pealeht</a> 
-  <a href="Sefiir.html" onclick="w3_close()" class="w3-bar-item w3-button" id="SefiirLink">Sefiir</a> 
-  <a href="kanala.html" onclick="w3_close()" class="w3-bar-item w3-button" id="kanalaLink">Kanakari</a>
-  <a href="Kitty.html" onclick="w3_close()" class="w3-bar-item w3-button" id="KittyLink">Kitty</a>
-</nav>
-
-<script>
-function highlightCurrentPage() {
-  var currentPage = document.title;
-  var links = document.querySelectorAll("#mySidebar a");
-  for (var i = 0; i < links.length; i++) {
-    var link = links[i];
-    if (link.innerHTML == currentPage) {
-      link.style.border = "2px solid green";
-    }
-  }
-}
-
-window.addEventListener("load", highlightCurrentPage);
-</script>
-
-<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar"><br>
-  <h3 class="w3-padding-64 w3-center"><b>Lemmikloomade<br>Veebileht<br><br>Sefiir</b></h3>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-  <a href="Pealeht.html" onclick="w3_close()" class="w3-bar-item w3-button" id="PealehtLink">Pealeht</a> 
-  <a href="Sefiir.html" onclick="w3_close()" class="w3-bar-item w3-button" id="SefiirLink">Sefiir</a> 
-  <a href="kanala.html" onclick="w3_close()" class="w3-bar-item w3-button" id="kanalaLink">Kanakari</a>
-  <a href="Kitty.html" onclick="w3_close()" class="w3-bar-item w3-button" id="KittyLink">Kitty</a>
-</nav>
-
-<body onload="javascript:highlightCurrentPage()"></body>
 <script src="skript.js"></script>
 
-window.addEventListener("load", highlightCurrentPage);
-</script>
+
+
 
 
 </body>
